@@ -51,20 +51,22 @@ img {
     max-width: 100%;
     height: auto;
 }
-:root{
---test1: #0c0f16;
---test2: #1c2331;
---test3: #b2bec3;
---test4: #a6daff;
---test5: #2EBFA5;
---test6: #D6D3F0;
---test7: #2F2D2E;
---test8: #0D1317;
---test9: #F2F3D9;
---test10: #92DCE5;
---test11: #FFBA49;
+
+:root {
+    --test1: #0c0f16;
+    --test2: #1c2331;
+    --test3: #b2bec3;
+    --test4: #a6daff;
+    --test5: #2EBFA5;
+    --test6: #D6D3F0;
+    --test7: #2F2D2E;
+    --test8: #0D1317;
+    --test9: #F2F3D9;
+    --test10: #92DCE5;
+    --test11: #FFBA49;
 
 }
+
 /* NORMALIZE CSS -END-*/
 
 /* CONTAINER -START-*/
@@ -107,7 +109,7 @@ nav {
 }
 
 .ppCont::before {
-content: '';
+    content: '';
     display: block;
     position: relative;
     width: inherit;
@@ -195,7 +197,7 @@ content: '';
 /* .links p{
     padding-bottom: 1rem;
 } */
-.pad-LR{
+.pad-LR {
     padding: 0 1rem;
     width: 100%;
 }
@@ -230,7 +232,7 @@ section {
     justify-content: start;
     flex: 85%;
     gap: 3rem;
-    padding: 2vw;
+    padding: 2rem 3rem;
 }
 
 .skills-cont {
@@ -272,19 +274,21 @@ progress[value]::-webkit-progress-bar {
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
+
 progress[value]::-webkit-progress-value {
     background-image:
-         -webkit-linear-gradient(-45deg, 
-                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
-                                 rgba(0,0, 0, .1) 66%, transparent 66%),
-         -webkit-linear-gradient(top, 
-                                 rgba(255, 255, 255, .25), 
-                                 rgba(0, 0, 0, .25)),
-         -webkit-linear-gradient(left, #393b5c, var(--test11));
-  
-      border-radius: 2px; 
-      background-size: 35px 20px, 100% 100%, 100% 100%;
-  }
+        -webkit-linear-gradient(-45deg,
+            transparent 33%, rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, #393b5c, var(--test11));
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
 section ul {
     display: flex;
     justify-content: space-evenly;
@@ -443,24 +447,26 @@ border: none;
 background: linear-gradient(to right, transparent 50%, #223049 50%), linear-gradient(to right, #00b9ff, #59d941);
 background-size: 16px 2px, 100% 2px; */
 
-.linkedin:hover a{
+.linkedin:hover a {
     color: #0A66C2;
     filter: drop-shadow(0px 2px 0px #000000);
 }
 
-.github:hover a{
+.github:hover a {
     color: #4d8fac;
     filter: drop-shadow(0px 2px 0px #000000);
 }
 
-.twitter:hover a{
+.twitter:hover a {
     color: #1DA1F2;
     filter: drop-shadow(0px 2px 0px black);
 }
-.inst{
+
+.inst {
     background-clip: text;
     color: #ffffff;
 }
+
 .instagram:hover .inst::before {
     background-color: #f3ec78;
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -482,10 +488,12 @@ nav:before {
     border-right: 7vw solid transparent;
     border-top: 7vw solid #222a44;
 }
-.skillsRow{
+
+.skillsRow {
     display: flex;
     gap: 1rem;
 }
+
 /* nav .wrapper:after {    
     content: "";
     position: absolute;
@@ -506,57 +514,129 @@ nav:before {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .pad-LR{
+    .container {
+        display: block;
+        height: auto;
+    }
+
+    nav {
+        margin-left: 0;
+        gap: 0.5rem;
+        border-right: none;
+        border-left: none;
+        border-bottom: 4px solid var(--test11);
+    }
+
+    nav:before {
+        content: none;
+    }
+
+    .ppCont {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .mail {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    section {
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .cont2 {
+        gap: 1rem;
+    }
+
+    .skillsRow {
+        display: block;
+    }
+
+    .skillsRow table {
+        width: 100%;
+        font-size: inherit;
+    }
+
+    .pad-LR {
         padding: 0;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .pad-LR{
+    .pad-LR {
         padding: 0;
     }
-    nav:before{
-        bottom:7.5vw;
+
+    nav:before {
+        bottom: 7.5vw;
+    }
+
+    section {
+        gap: 2rem;
+        padding: 2rem 0;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    nav{
+    nav {
         font-size: 2vw;
     }
-    .pad-LR{
+
+    .pad-LR {
         padding: 0;
     }
-    nav:before{
-        bottom:6vw;
+
+    nav:before {
+        bottom: 6vw;
+    }
+
+    section {
+        padding: 2rem 0;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    nav{
+    nav {
         font-size: 1.5vw;
     }
-    .pad-LR{
+
+    .pad-LR {
         padding: 0 1rem;
     }
-    nav:before{
-        bottom:2vw;
+
+    nav:before {
+        bottom: 2vw;
+    }
+
+    section {
+        padding: 2rem 3rem;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    nav{
+    nav {
         font-size: 1.5vw;
     }
-    .pad-LR{
+
+    .pad-LR {
         padding: 0 1rem;
     }
-    nav:before{
-        bottom:2vw;
+
+    nav:before {
+        bottom: 2vw;
     }
 }
-
