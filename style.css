@@ -201,7 +201,7 @@ nav {
     width: 100%;
 }
 
-.fit-left{
+.fit-left {
     width: fit-content;
     text-align: left;
 }
@@ -247,6 +247,10 @@ button:hover {
 table {
     width: 50%;
     font-size: 1.5vw;
+}
+
+.exp-table {
+    width: 100%;
 }
 
 table tr td {
@@ -498,13 +502,16 @@ background-size: 16px 2px, 100% 2px; */
     display: flex;
     gap: 1rem;
 }
-.content-header{
+
+.content-header {
     font-size: 2.5em
 }
-.content-p{
+
+.content-p {
     padding: 1rem;
     font-size: 1.3em;
 }
+
 /* nav .wrapper:after {    
     content: "";
     position: absolute;
@@ -528,6 +535,13 @@ background-size: 16px 2px, 100% 2px; */
     .container {
         display: block;
         height: auto;
+    }
+
+    .fit-left {
+        width: fit-content;
+        text-align: left;
+        display: flex;
+        gap: 1rem;
     }
 
     nav {
