@@ -46,11 +46,6 @@ a {
     color: #ffffff;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 :root {
     --test1: #0c0f16;
     --test2: #1c2331;
@@ -78,20 +73,27 @@ img {
 
 
 /* NAVBAR -START-*/
+#header{
+    text-align: center;
+}
 nav {
+    font-size: 20px;
     flex: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #222a44;
+    /* background-color: #222a44; */
     /* margin-left: 1vw; */
     /* border-left: 2px solid var(--test11); */
     border-right: 2px solid var(--test11);
     /* border-bottom: 2px solid var(--test11); */
-    gap: 1rem;
+    gap: 2rem;
     color: white;
-    /* height: 88%; */
+    height: 5%;
+    overflow: hidden;
+    transition: height 250ms ease;
+
 }
 
 .ppCont img {
@@ -177,8 +179,8 @@ nav {
 /* PP ANIMATİON -END-*/
 
 .pp {
-    width: 10rem;
-    height: 10rem;
+    width: calc(17vw + 20px);
+    border-radius: 50%;
 }
 
 .infoCont {
@@ -201,9 +203,12 @@ nav {
     width: 100%;
 }
 
-.fit-left {
+.nav-elem {
     width: fit-content;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 button {
@@ -512,43 +517,19 @@ background-size: 16px 2px, 100% 2px; */
     font-size: 1.3em;
 }
 
-/* nav .wrapper:after {    
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0;
-} */
-/* nav:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    border-bottom: 95px solid antiquewhite;
-} */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 767px) {
     .container {
         display: block;
         height: auto;
     }
 
-    .fit-left {
-        width: fit-content;
-        text-align: left;
-        display: flex;
-        gap: 1rem;
+    .nav-elem {
+        flex-direction: row;
     }
 
     nav {
-        margin-left: 0;
         gap: 0.5rem;
-        border-right: none;
-        border-left: none;
         border-bottom: 4px solid var(--test11);
     }
 
@@ -597,71 +578,7 @@ background-size: 16px 2px, 100% 2px; */
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .pad-LR {
-        padding: 0;
-    }
-
-    nav:before {
-        bottom: 7.5vw;
-    }
-
-    .content {
-        gap: 2rem;
-        padding: 2rem 0;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    nav {
-        font-size: 2vw;
-    }
-
-    .pad-LR {
-        padding: 0;
-    }
-
-    nav:before {
-        bottom: 6vw;
-    }
-
-    .content {
-        padding: 2rem 0;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    nav {
-        font-size: 1.5vw;
-    }
-
-    .pad-LR {
-        padding: 0 1rem;
-    }
-
-    nav:before {
-        bottom: 2vw;
-    }
-
-    .content {
-        padding: 2rem 3rem;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    nav {
-        font-size: 1.5vw;
-    }
-
-    .pad-LR {
-        padding: 0 1rem;
-    }
-
-    nav:before {
-        bottom: 2vw;
-    }
-}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Tabletler ve küçük ekranlı cihazlar için stil kuralları */
+  }
+  
